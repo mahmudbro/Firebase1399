@@ -1,0 +1,9 @@
+ btnSend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String message = etMessage.getText().toString();
+                Chat chat = new Chat("zulfakar", message);
+                chatReference.push().setValue(chat);
+                etMessage.getText().clear();
+            }
+        });
